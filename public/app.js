@@ -17,10 +17,10 @@ btnSend.addEventListener("click", (e) => {
   e.preventDefault();
 
   sendMsg(msgText.value);
-  msgText.value = ''
+  msgText.value = "";
 
   msgText.focus();
-  chatBox.scrollTop = chatBox.scrollHeight
+  chatBox.scrollTop = chatBox.scrollHeight;
 });
 
 const sendMsg = (message) => {
@@ -36,7 +36,7 @@ const sendMsg = (message) => {
 
 socket.on("sendToAll", (msg) => {
   display(msg, "other-message");
-  chatBox.scrollTop = chatBox.scrollHeight
+  chatBox.scrollTop = chatBox.scrollHeight;
 });
 
 const display = (msg, type) => {
@@ -54,6 +54,6 @@ const display = (msg, type) => {
     <div class="message-time">${times}</div>
     `;
 
-    msgDiv.innerHTML = innerText
-    displayMsg.appendChild(msgDiv)
+  msgDiv.innerHTML = innerText;
+  displayMsg.appendChild(msgDiv);
 };
